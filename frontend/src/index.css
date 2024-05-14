@@ -45,3 +45,38 @@ button:focus-visible {
 
   }
 }
+
+.fighter-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+  width: 20%;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.fighter-card--body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.fighter-card--stats {
+  width: 45%;
+}
+
+.health-container {
+  width: 100%;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.health-container .health-container--bar {
+
+}
