@@ -1,10 +1,9 @@
-import Combat from './screens/Combat';
-import fighters from './fighters';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      <Combat fighters={fighters} />
+      <Outlet />
       {/* Add Fighter Btn */}
       {/* End Combat Btn */}
     </>
