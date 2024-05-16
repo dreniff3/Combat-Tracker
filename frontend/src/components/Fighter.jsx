@@ -51,27 +51,35 @@ const Fighter = ({ fighter }) => {
                         implement onClick for decrementing currHealth
                         
                         */}
-                        <GiDrippingKnife 
-                            style={{
-                                color: '#DE2802',
-                                fontSize: '50px',
-                                transform: 'rotateX(45deg) rotateY(160deg)',
-                            }}
-                        />
-                        <div class="health-container">
-                            <div class="health-container--bar" style={healthStyles}></div>
+                        <div className="health-input">
+                            <input type="number" />
+                            <GiDrippingKnife 
+                                style={{
+                                    color: '#DE2802',
+                                    fontSize: '30px',
+                                    transform: 'rotateX(45deg) rotateY(160deg)',
+                                    marginTop: '-7px',
+                                }}
+                            />
+                        </div>
+                        <div className="health-container">
+                            <div className="health-container--bar" style={healthStyles}></div>
                         </div>
                         {/* 
                         
                         implement onClick for incrementing currHealth
 
                         */}
-                        <GiHealthNormal 
-                            style={{
-                                color: '#21CA20',
-                                fontSize: '30px',
-                            }}
-                        />
+                        <div className="health-input">
+                            <input type="number" />
+                            <GiHealthNormal 
+                                style={{
+                                    color: '#21CA20',
+                                    fontSize: '20px',
+                                    marginLeft: '5px',
+                                }}
+                            />
+                        </div>
                     </Card.Text>
                 </div>
             </Card.Body>
