@@ -4,7 +4,7 @@ import { PiHandPointing } from "react-icons/pi";
 
 const FighterList = ({ fighters, turn }) => {
     // Change to props passed from App.jsx on 'Next Turn' click
-    let thisTurn = fighters[turn-1];
+    let thisTurn = fighters[turn];
 
     return (
         <div className="fighter-list">
