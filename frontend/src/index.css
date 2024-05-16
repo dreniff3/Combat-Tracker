@@ -51,6 +51,12 @@ h1 {
 
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
 button {
   width: 300px;
   background-color: inherit;
@@ -60,10 +66,14 @@ button {
   border: 4px solid #FFF;
   padding: 5px 10px;
   font-size: 20px;
-  /* transition: background-color 500ms, color 500ms; */
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
 }
 
-button:hover {
+button:disabled,
+button[disabled] {
   background-color: #1e1e1e;
   color: #dadada;
 }
@@ -135,6 +145,7 @@ button:active {
 
 .fighter-card--stats {
   width: 100%;
+  margin-top: 12px;
 }
 
 .fighter-card--stats > h5 {
@@ -160,4 +171,34 @@ button:active {
 
 .health-container .health-container--bar {
 
+}
+
+.health-input {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  gap: 5px;
+}
+
+.health-input > input {
+  background-color: inherit;
+  color: #575757;
+  border: solid 1px #575757;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 1px;
+  height: fit-content;
+  font-weight: bold;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
