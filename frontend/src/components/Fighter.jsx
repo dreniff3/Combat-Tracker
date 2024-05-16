@@ -1,10 +1,15 @@
 import { Card } from "react-bootstrap";
 import { IoIosPerson } from "react-icons/io";
+import { PiShieldBold } from "react-icons/pi";
+import { GiHealthNormal } from "react-icons/gi";
+import { GiDrippingKnife } from "react-icons/gi";
 
 const Fighter = ({ fighter }) => {
     let healthPercentage = (Math.floor(100 * fighter.currHealth / fighter.maxHealth));
     let healthColor;
-    healthPercentage < 100 ? healthColor = '#DE2802' : healthColor = '#21CA20';
+    healthPercentage < 30 ? healthColor = '#DE2802' 
+    : healthPercentage < 100 ? healthColor = '#F0DA0E' 
+    : healthColor = '#21CA20';
     let healthStyles = {
         width: `${healthPercentage}%`,
         height: '100%',
@@ -19,7 +24,7 @@ const Fighter = ({ fighter }) => {
                     style={{
                         color: 'gray',
                         backgroundColor: 'white',
-                        fontSize: '36px',
+                        fontSize: '50px',
                         borderRadius: '2px',
                     }}
                 />
@@ -27,17 +32,46 @@ const Fighter = ({ fighter }) => {
                 <Card.Img src={fighter.image} />
             )}
             <Card.Body className="fighter-card--body">
-                <Card.Title as="div" className="fighter-card--name">
+                <Card.Title as="div" className="fighter-card--header">
                     <strong>{fighter.name}</strong>
+                    <Card.Text as="h5">
+                        <PiShieldBold 
+                            style={{
+                                fontSize: '22px',
+                                position: 'relative',
+                                fontWeight: '800',
+                            }}
+                        />:<span>{fighter.armor}</span></Card.Text>
                 </Card.Title>
                 <div className="fighter-card--stats">
-                    <Card.Text as="h5">
-                        HP: <div class="health-container">
-                                <div class="health-container--bar" style={healthStyles}></div>
-                            </div>
-                    </Card.Text>
-                    <Card.Text as="h5">
-                        AC: {fighter.armor}
+                    <Card.Text as="h5" id="health">
+                        HP: 
+                        {/* 
+
+                        implement onClick for decrementing currHealth
+                        
+                        */}
+                        <GiDrippingKnife 
+                            style={{
+                                color: '#DE2802',
+                                fontSize: '50px',
+                                transform: 'rotateX(45deg) rotateY(160deg)',
+                            }}
+                        />
+                        <div class="health-container">
+                            <div class="health-container--bar" style={healthStyles}></div>
+                        </div>
+                        {/* 
+                        
+                        implement onClick for incrementing currHealth
+
+                        */}
+                        <GiHealthNormal 
+                            style={{
+                                color: '#21CA20',
+                                fontSize: '30px',
+                            }}
+                        />
                     </Card.Text>
                 </div>
             </Card.Body>
