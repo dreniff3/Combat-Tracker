@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Header = ({ turn }) => {
+const Header = ({ round }) => {
     let header;
-    if (turn === 0) {
+    if (round === 0) {
         header = 'Combat Tracker'
     } else {
-        header = 'Round ' + String(turn);
+        header = 'Round ' + String(round);
     }
 
     return (
