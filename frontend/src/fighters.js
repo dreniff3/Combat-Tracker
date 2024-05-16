@@ -24,7 +24,7 @@ const fighters = [
         name: 'Slime',
         image: '',
         initiative: 2,
-        currHealth: 11,
+        currHealth: 3,
         maxHealth: 11,
         armor: 11,
         conditions: [],
