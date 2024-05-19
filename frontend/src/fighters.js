@@ -7,7 +7,6 @@ const fighters = [
         currHealth: 5,
         maxHealth: 9,
         armor: 11,
-        conditions: [],
     },
     {
         _id: '2',
@@ -17,7 +16,6 @@ const fighters = [
         currHealth: 5,
         maxHealth: 5,
         armor: 8,
-        conditions: [],
     },
     {
         _id: '3',
@@ -27,7 +25,6 @@ const fighters = [
         currHealth: 3,
         maxHealth: 11,
         armor: 11,
-        conditions: [],
     },
 ];
 
