@@ -9,12 +9,13 @@ import {
 import App from './App.jsx'
 import CombatScreen from './screens/CombatScreen';
 import './index.css'
-import fighters from './fighters';
+// import fighters from './fighters';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index={true} path="/" element={<CombatScreen fighters={fighters} />} />
+      {/* <Route index={true} path="/" element={<CombatScreen fighters={fighters} />} /> */}
+      <Route index={true} path="/" element={<CombatScreen />} />
 
     </Route>
   )
