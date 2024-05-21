@@ -47,6 +47,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 type="number"
                 name="init"
                 value={initiative}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => setInitiative(e.target.value)}
               />
             </div>
@@ -56,6 +57,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 type="number"
                 name="armor"
                 value={armor}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => setArmor(e.target.value)}
               />
             </div>
@@ -65,6 +67,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 type="number"
                 name="health"
                 value={maxHealth}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => setMaxHealth(e.target.value)}
               />
             </div>
