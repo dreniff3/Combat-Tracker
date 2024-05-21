@@ -34,12 +34,14 @@ const DieRoller = () => {
             <input 
                 type="number" 
                 value={numDie}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => setNumDie(e.target.value)}
             />
             <span>d</span>
             <input 
                 type="number" 
                 value={diceType}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => setDiceType(e.target.value)}
             />
             <button id="roll-btn">
