@@ -73,7 +73,7 @@ const AddFighters = ({ fighters, setFighters }) => {
               />
             </div>
           </div>
-          <input type="submit" value="Add Player" />
+          <input type="submit" value="Add Fighter" />
         </form>
       </div>
     );
