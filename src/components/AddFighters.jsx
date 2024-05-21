@@ -18,7 +18,8 @@ const AddFighters = ({ fighters, setFighters }) => {
             name, 
             initiative,
             armor,
-            currHealth: maxHealth,
+            // TODO: bugfix -- on new round, currHealth is reset to maxHealth
+            currHealth: maxHealth, 
             maxHealth,
         };
         setFighters(fighters => [...fighters, fighter].sort((a, b) => b.initiative - a.initiative));

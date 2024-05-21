@@ -7,7 +7,8 @@ import { GiHealthNormal } from "react-icons/gi";
 import { GiDrippingKnife } from "react-icons/gi";
 
 const Fighter = ({ fighter }) => {
-    const [hp, setHP] = useState(fighter.currHealth);
+    // TODO: bugfix -- on new round, currHealth is reset to maxHealth
+    const [hp, setHP] = useState(fighter.currHealth); 
     const [dmg, setDmg] = useState(1);
     const [heal, setHeal] = useState(1);
 
