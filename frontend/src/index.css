@@ -125,11 +125,11 @@ form > .form-inputs > div {
 }
 
 .form-inputs > div > input {
-  background: #000;
+  background: inherit;
   border: 2px solid #575757;
   border-radius: 5px;
   padding: 5px 10px;
-  color: #919191;
+  color: inherit;
   font-size: 18px;
 }
 
@@ -242,6 +242,36 @@ input:not[type=submit] {
   padding-top: 1px;
   height: fit-content;
   font-weight: bold;
+}
+
+.die-roller {
+  display: flex;
+  width: 300px;
+  margin-top: 100px;
+  align-items: center;
+  gap: 7px;
+}
+
+.die-roller > input {
+  width: 50px;
+  height: 36px;
+  background: inherit;
+  border: 2px solid #575757;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: inherit;
+  font-size: 18px;
+  text-align: center;
+}
+
+.die-roller > span {
+  font-size: 25px;
+}
+
+.result {
+  display: table;
+  /* width: 20px;
+  text-align: center; */
 }
 
 /* Chrome, Safari, Edge, Opera */
