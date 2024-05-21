@@ -33,7 +33,7 @@ const AddFighters = ({ fighters, setFighters }) => {
 <div className="add-form">
         <form onSubmit={handleSubmit}>
           <div className="form-inputs">
-            <div id="name">
+            <div id="name-input">
               <label htmlFor="name">Name: </label>
               <input
                 type="text"
@@ -42,7 +42,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div id="initiative">
+            <div id="initiative-input">
               <label htmlFor="init">Initiative: </label>
               <input 
                 type="number"
@@ -52,7 +52,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 onChange={(e) => setInitiative(e.target.value)}
               />
             </div>
-            <div id="armor">
+            <div id="armor-input">
               <label htmlFor="armor">Armor Class: </label>
               <input 
                 type="number"
@@ -62,7 +62,7 @@ const AddFighters = ({ fighters, setFighters }) => {
                 onChange={(e) => setArmor(e.target.value)}
               />
             </div>
-            <div id="health">
+            <div id="health-input">
               <label htmlFor="health">Health: </label>
               <input 
                 type="number"
