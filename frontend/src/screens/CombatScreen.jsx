@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import FighterList from '../components/FighterList';
 import AddFighters from '../components/AddFighters';
+import DieRoller from '../components/DieRoller';
 import { PiSword } from "react-icons/pi";
 import { FaSkullCrossbones } from "react-icons/fa";
 
@@ -67,6 +68,9 @@ const CombatScreen = () => {
                     onClick={endCombat}
                 >End Combat <FaSkullCrossbones /></button>
                 )}
+            </div>
+            <div>
+                <DieRoller />
             </div>
         </>
     );
