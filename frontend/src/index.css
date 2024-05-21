@@ -219,7 +219,7 @@ input:not[type=submit] {
   border-radius: 20px;
   overflow: hidden;
   height: 10px;
-  margin-bottom: 1px;
+  margin: 1px 7px;
 }
 
 .health-container .health-container--bar {
