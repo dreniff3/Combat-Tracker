@@ -8,39 +8,23 @@ import { GiDrippingKnife } from "react-icons/gi";
 
 const Fighter = ({ fighter }) => {
     const [hp, setHP] = useState(fighter.currHealth);
-    const [dmg, setDmg] = useState(1);
-    const [heal, setHeal] = useState(1);
-
-    // const handleDamage = (e) => {
-    //     e.preventDefault();
-    //     const amount = dmg;
-    //     console.log(dmg);
-    //     setHP(hp - amount);
-    //     console.log(hp);
-    //     setDmg(1);
-    // };
-
-    // const handleHeal = (e) => {
-    //     e.preventDefault();
-    //     const amount = heal;
-    //     console.log(heal);
-    //     setHP(hp + amount);
-    //     console.log(hp);
-    //     setHeal(1);
-    // }
 
     const handleDamage = () => {
-        setHP(hp => hp - 1);
+        fighter.currHealth = fighter.currHealth - 1;
+        setHP(fighter.currHealth);
     };
 
     const handleHeal = () => {
-        setHP(hp => hp + 1);
+        fighter.currHealth = fighter.currHealth + 1;
+        setHP(fighter.currHealth);
     }
 
     useEffect(() => {
         if (hp < 0) {
+            fighter.currHealth = 0;
             setHP(0);
         } else if (hp > fighter.maxHealth) {
+            fighter.currHealth = fighter.maxHealth;
             setHP(fighter.maxHealth);
         }
     }, [hp])
@@ -74,33 +58,7 @@ const Fighter = ({ fighter }) => {
                 <div className="fighter-card--stats">
                     <Card.Text as="h5" id="health">
                         HP: 
-                        {/* <form 
-                            className="health-input"
-                            onSubmit={handleDamage}
-                        >
-                            <input 
-                                type="number"
-                                value={dmg}
-                                onChange={(e) => setDmg(dmg => e.target.value)}
-                            />
-                            <button 
-                                className="dmg-btn"
-                                style={{
-                                    width: 'fit-content',
-                                    border: 'none',
-                                }}
-                            >
-                                <GiDrippingKnife 
-                                    style={{
-                                        color: '#DE2802',
-                                        fontSize: '30px',
-                                        transform: 'rotateX(45deg) rotateY(160deg)',
-                                        marginTop: '-7px',
-                                        marginLeft: '-8px'
-                                    }}
-                                />
-                            </button>
-                        </form> */}
+                        
                         <button 
                             className="dmg-btn"
                             style={{
@@ -108,48 +66,20 @@ const Fighter = ({ fighter }) => {
                                 border: 'none',
                             }}
                             onClick={handleDamage}
-                            >
-                                <GiDrippingKnife 
-                                    style={{
-                                        color: '#DE2802',
-                                        fontSize: '30px',
-                                        transform: 'rotateX(45deg) rotateY(160deg)',
-                                        marginTop: '-7px',
-                                        marginLeft: '-8px'
-                                    }}
-                                />
-                            </button>
-                        <HealthBar currHealth={hp} maxHealth={fighter.maxHealth} />
-                        {/* 
-                        
-                        implement onClick for incrementing currHealth
-
-                        */}
-                        {/* <form 
-                            className="health-input"
-                            onSubmit={handleHeal}
                         >
-                            <input 
-                                type="number"
-                                value={heal}
-                                onChange={(e) => setHeal(heal => e.target.value)}
-                            />
-                            <button 
-                                className="heal-btn"
+                            <GiDrippingKnife 
                                 style={{
-                                    width: 'fit-content',
-                                    border: 'none',
+                                    color: '#DE2802',
+                                    fontSize: '30px',
+                                    transform: 'rotateX(45deg) rotateY(160deg)',
+                                    marginTop: '-7px',
+                                    marginLeft: '-8px'
                                 }}
-                            >
-                                <GiHealthNormal 
-                                    style={{
-                                        color: '#21CA20',
-                                        fontSize: '20px',
-                                        marginLeft: '-5px',
-                                    }}
-                                />
-                            </button>
-                        </form> */}
+                            />
+                        </button>
+
+                        <HealthBar currHealth={hp} maxHealth={fighter.maxHealth} />
+
                         <button 
                             className="heal-btn"
                             style={{
