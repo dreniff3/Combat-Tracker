@@ -56,46 +56,51 @@ const Fighter = ({ fighter }) => {
                         />:<span>{fighter.armor}</span></Card.Text>
                 </Card.Title>
                 <div className="fighter-card--stats">
-                    <Card.Text as="h5" id="health">
-                        HP: 
-                        
-                        <button 
-                            className="dmg-btn"
-                            style={{
-                                width: 'fit-content',
-                                border: 'none',
-                            }}
-                            onClick={handleDamage}
-                        >
-                            <GiDrippingKnife 
-                                style={{
-                                    color: '#DE2802',
-                                    fontSize: '30px',
-                                    transform: 'rotateX(45deg) rotateY(160deg)',
-                                    marginTop: '-7px',
-                                    marginLeft: '-8px'
-                                }}
-                            />
-                        </button>
+                    <Card.Text as="h5" className="health">
+                        <div className="healthnum-container">
+                            HP: {hp} / {fighter.maxHealth}
+                        </div> 
 
-                        <HealthBar currHealth={hp} maxHealth={fighter.maxHealth} />
-
-                        <button 
-                            className="heal-btn"
-                            style={{
-                                width: 'fit-content',
-                                border: 'none',
-                            }}
-                            onClick={handleHeal}
-                        >
-                            <GiHealthNormal 
+                        <div className="healthui-container">
+                            <button 
+                                className="dmg-btn"
                                 style={{
-                                    color: '#21CA20',
-                                    fontSize: '20px',
-                                    marginLeft: '-5px',
+                                    width: 'fit-content',
+                                    border: 'none',
                                 }}
-                            />
-                        </button>
+                                onClick={handleDamage}
+                            >
+                                <GiDrippingKnife 
+                                    style={{
+                                        color: '#DE2802',
+                                        fontSize: '30px',
+                                        transform: 'rotateX(45deg) rotateY(160deg)',
+                                        marginTop: '-7px',
+                                        marginLeft: '-8px'
+                                    }}
+                                />
+                            </button>
+
+                            <HealthBar currHealth={hp} maxHealth={fighter.maxHealth} />
+
+                            <button 
+                                className="heal-btn"
+                                style={{
+                                    width: 'fit-content',
+                                    border: 'none',
+                                }}
+                                onClick={handleHeal}
+                            >
+                                <GiHealthNormal 
+                                    style={{
+                                        color: '#21CA20',
+                                        fontSize: '20px',
+                                        marginLeft: '-5px',
+                                    }}
+                                />
+                            </button>
+                        </div>
+
                     </Card.Text>
                 </div>
             </Card.Body>
