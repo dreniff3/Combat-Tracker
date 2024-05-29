@@ -189,11 +189,23 @@ input:not[type=submit] {
 }
 
 /*  ----- Health -----  */
-#health {
-  gap: var(--gapMd);
+.health {
+  display: flex;
+  flex-direction: column;
 }
 
-.health-container {
+.healthnum-container {
+  margin-left: -40px;
+  margin-top: var(--gapMd);
+}
+
+.healthui-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.healthbar-container {
   width: 100%;
   background: #000;
   border: 2px solid #FFF;
