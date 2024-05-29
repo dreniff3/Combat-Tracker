@@ -18,7 +18,7 @@ const HealthBar = ({ currHealth, maxHealth }) => {
     }, [currHealth])
 
     return (
-        <div className="health-container">
+        <div className="healthbar-container">
             <div className="health-container--bar" style={healthStyles}></div>
         </div>
     );
