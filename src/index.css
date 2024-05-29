@@ -205,6 +205,11 @@ input:not[type=submit] {
   align-items: center;
 }
 
+.healthui-container > button:active {
+  background-color: var(--primaryDark);
+  transform: scale(0.8);
+}
+
 .healthbar-container {
   width: 100%;
   background: #000;
