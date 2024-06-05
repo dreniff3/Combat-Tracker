@@ -27,4 +27,5 @@ Quickstart:
 
 Example:
 
-![combat_tracker_example](https://github.com/dreniff3/Combat-Tracker/assets/85808475/62dc573d-9f17-4d48-a588-32164d46da07)
+![combat_tracker_example](https://github.com/dreniff3/Combat-Tracker/assets/85808475/872d1910-e556-4d9a-a853-4056ff40021f)
+
